@@ -1,3 +1,11 @@
+/**
+ *
+ * @topic   Reading acceleration on 3 axis and sound, and write it to a SD card
+ * @author  Aurelian Ammon / Michael Schoenenberger / Daniel Holler
+ * @date    10-11-2017
+ *
+ */
+
 //led ring
 // NeoPixel Ring simple sketch (c) 2013 Shae Erisson
 // released under the GPLv3 license to match the rest of the AdaFruit NeoPixel library
@@ -295,22 +303,12 @@ void loop()
     dY = (int16_t) y / 64.0;
     dZ = (int16_t) z / 64.0;
 
-    //Serial.print("error = ");
-    //Serial.print(error, DEC);
-    //Serial.print(", xyz g-forces = ");
     Serial.print(dX, 3);
     Serial.print(",");
     Serial.print(dY, 3);
     Serial.print(",");
     Serial.print(dZ, 3);
     Serial.print(",");
-
-    //file.print(dX, 3);
-    //file.print(",");
-    //file.print(dY, 3);
-    //file.print(",");
-    //file.print(dZ, 3);
-    //file.print(",");
 
     data = data + dX + "," + dY + "," + dZ + ",";
 
@@ -363,8 +361,6 @@ void loop()
   } else {
     led_count++;
   }
-
-  //delay(20);
 }
 
 

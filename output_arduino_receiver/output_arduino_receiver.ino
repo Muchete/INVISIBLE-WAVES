@@ -1,3 +1,11 @@
+/**
+ *
+ * @topic   Converting data from processing to servo movements
+ * @author  Aurelian Ammon / Michael Schoenenberger / Daniel Holler
+ * @date    10-11-2017
+ *
+ */
+
 #include <SoftwareSerial.h>
 
 // pin 0 is to receive from the controller and does not need to be connected
@@ -13,23 +21,29 @@ int incomingValues[NUM_OF_VALUES];
 #define SERVO2 2
 #define SERVO3 3
   
-#define MIN_SERVO0 70
-#define MAX_SERVO0 200
+#define ZERO_SERVO0 0
+#define MIN_SERVO0 1
+#define MAX_SERVO0 110
 
-#define MIN_SERVO1 215
-#define MAX_SERVO1 70
+#define ZERO_SERVO1 254
+#define MIN_SERVO1 254
+#define MAX_SERVO1 105
 
-#define MIN_SERVO2 205
-#define MAX_SERVO2 65
+#define ZERO_SERVO2 254
+#define MIN_SERVO2 240
+#define MAX_SERVO2 90
 
-#define MIN_SERVO3 30
-#define MAX_SERVO3 165
+#define ZERO_SERVO3 0
+#define MIN_SERVO3 1
+#define MAX_SERVO3 140
 
 
 void setup() {
   Serial.begin(9600);
   pololu.begin(9600);
 
+  delay(1000);
+  goToZero();
 }
   
 void loop() {
@@ -44,7 +58,6 @@ void loop() {
   move(SERVO1, incomingValues[1]);
   move(SERVO2, incomingValues[2]);
   move(SERVO3, incomingValues[3]);
-
 }
 
 void split(String inputString, int returnData[], int numOfValues)
@@ -86,4 +99,17 @@ void setPosition(int servo, int pos) {
   pololu.write(0xFF); // write synchronization flag
   pololu.write(servo + 8); // write servo number (without +8 == 90°)
   pololu.write(pos); // write position
+}
+
+void goToZero (){
+  setPosition(0, MAX_SERVO0);
+  setPosition(1, MAX_SERVO1);
+  setPosition(2, MAX_SERVO2);
+  setPosition(3, MAX_SERVO3);
+  delay(1000);
+  setPosition(0, ZERO_SERVO0);
+  setPosition(1, ZERO_SERVO1);
+  setPosition(2, ZERO_SERVO2);
+  setPosition(3, ZERO_SERVO3);
+  delay(1000);
 }
