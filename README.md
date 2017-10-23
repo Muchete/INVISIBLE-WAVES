@@ -29,6 +29,7 @@ The processing sketch is stored in the XXX folder, and the arduino file in the X
 reader = createReader("data_mehrspursession.txt");
 ```
 * **S** _Starts the transformation according to the dataset, previously loaded with key R_
+_By pressing the arrowkeys UP and DOWN, you can change the offset of the arms (for smaller or larger objects)._
 
 * **O** _Is some sort of showcase, where two axis move simultaniously_
 
