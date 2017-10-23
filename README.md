@@ -20,14 +20,22 @@ Where 4435 are the millis, -0.016 the G force of the X axis, -0.016 the G force 
 The output device requires two programs. We use processing, which sends a string with 4 values to the arduino, which then transforms these values to specific numbers for each servo. 
 The processing sketch is stored in the XXX folder, and the arduino file in the XXX folder.
 
-### Using the processing interface
+### Using the output device
+#### Before running the Processing script
+1. Select serial port on line 45
+```processing
+myPort = new Serial(this, Serial.list()[5], 9600); // Open a new port and connect with Arduino at 9600 baud
+```
+2. Select dataset on line 64.
+```processing
+reader = createReader("data_mehrspursession.txt");
+```
+3. Run the code!
+
 ![Image of Processing Interface](https://github.com/Muchete/PhysComp2017/blob/master/processingInterface.png)
 
 * **R** _Reads the dataset specified on line 64._
-```processing
-// Open the file from the createWriter() example 
-reader = createReader("data_mehrspursession.txt");
-```
+
 * **S** _Starts the transformation according to the dataset, previously loaded with key R. By pressing the arrowkeys UP and DOWN, you can change the offset of the arms (for smaller or larger objects)._
 
 * **O** _Is some sort of showcase, where two axis move simultaniously._
