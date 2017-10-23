@@ -21,3 +21,4 @@ The output device requires two programs. We use processing, which sends a string
 The processing sketch is stored in the XXX folder, and the arduino file in the XXX folder.
 
 ### Using the processing interface
+![Image of Processing Interface](https://github.com/Muchete/PhysComp2017/blob/master/processingInterface.png)
