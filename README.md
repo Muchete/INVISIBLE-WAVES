@@ -42,4 +42,4 @@ reader = createReader("data_mehrspursession.txt");
 
 * **O** _Is some sort of showcase, where two axis move simultaniously._
 
-* **C** _Opens all the arms to put the petri object inside or to remove it._
+* **C** _Opens all the arms to place or remove the petri object._

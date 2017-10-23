@@ -40,7 +40,7 @@ ArrayList<DataPoint> dataSet = new ArrayList<DataPoint>();
 void setup()
 {
     background(255);
-    size(500, 500);
+    size(500, 160);
     println(Serial.list()); // Prints the list of serial available devices (Arduino should be on top of the list)
     myPort = new Serial(this, Serial.list()[5], 9600); // Open a new port and connect with Arduino at 9600 baud
 
