@@ -22,3 +22,14 @@ The processing sketch is stored in the XXX folder, and the arduino file in the X
 
 ### Using the processing interface
 ![Image of Processing Interface](https://github.com/Muchete/PhysComp2017/blob/master/processingInterface.png)
+
+* **R** _Reads the dataset specified on line 64_
+```processing
+// Open the file from the createWriter() example 
+reader = createReader("data_mehrspursession.txt");
+```
+* **S** _Starts the transformation according to the dataset, previously loaded with key R_
+
+* **O** _Is some sort of showcase, where two axis move simultaniously_
+
+* **C** _Opens all the arms to put the petri object inside or to remove it_
