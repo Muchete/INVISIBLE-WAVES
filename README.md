@@ -1,4 +1,5 @@
 # PhysComp2017
+A group project from Aurelian Ammon, Daniel Holler, and Michael Schönenberger during the Physical Computing module in the Bachelor of Interaction Design in Zurich.
 
 ## Input Code
 The code of our input device is stored the input_measureXYZSOUND folder. 
