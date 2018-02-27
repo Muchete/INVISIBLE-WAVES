@@ -35,7 +35,7 @@ reader = createReader("data_mehrspursession.txt");
 ```
 3. Run the code!
 
-![Image of Processing Interface](https://github.com/Muchete/PhysComp2017/blob/master/processingInterface.png)
+![Image of Processing Interface](https://user-images.githubusercontent.com/29760709/36719036-2fdfb1ae-1ba4-11e8-8d3d-4bf6cb685801.png)
 
 * **R** _Reads the dataset specified in the code._
 
