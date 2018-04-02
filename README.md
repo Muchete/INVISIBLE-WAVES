@@ -1,6 +1,10 @@
 # PhysComp2017
 A group project from Aurelian Ammon, Daniel Holler, and Michael Schönenberger during the Physical Computing module in the Bachelor of Interaction Design in Zurich.
 
+![Data Collector and Visualizer](https://user-images.githubusercontent.com/29760709/38198368-d5152296-368c-11e8-94d4-b64f7518dad1.jpg)
+
+[Video](https://vimeo.com/241423111)
+
 ## Input Code
 The code of our input device is stored the input_measureXYZSOUND folder. 
 It will generate a data.txt file, looking like this:
